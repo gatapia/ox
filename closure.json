@@ -1,0 +1,5 @@
+{
+  additionalCompileRoots: [
+    '../ncnode/node_wrappers'
+  ]
+}
