@@ -1,0 +1,26 @@
+.* {
+  font-family:helvetica;
+}
+
+.term, .term input {
+  background-color:#333;
+  color:#eee;
+
+  font-size:small;
+  border:groove 2px silver;
+  padding-left:2px;
+}
+
+.term div {
+  width:100%;
+  padding-left:2px;
+}
+
+.term input {
+  width:99%;
+  border:none;
+}
+
+.term input:focus {
+  outline: none;
+}

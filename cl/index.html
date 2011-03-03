@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link REL="stylesheet" HREF="style.css" TYPE="text/css" >
+  </head>
+  <body>
+    <div id='terminal' class='term'>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../nclosure/third_party/closure-library/closure/goog/base.js"></script>
+    <script src="deps.js"></script>
+    <script src="ox.js"></script>
+    <script>
+      goog.require('ox.cl.ox');
+      new ox.cl.ox();
+    </script>
+  </body>
+</html>
