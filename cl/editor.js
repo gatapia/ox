@@ -20,9 +20,11 @@ ox.cl.editor = function(parent) {
   this.parent_ = parent;
   this.lines_ = [];
   this.buffer_ = [];
+  this.input_;
+  this.inputContainer_;
   this.commandBuffer_ = [];
   this.commandBufferIdx_ = 0;
-  this.input_ = this.initInput_();
+  this.buildInput_();
   this.render_();
   this.unFocus_();
 };
@@ -63,13 +65,22 @@ ox.cl.editor.prototype.setEnabled = function(enabled) {
   }
 };
 
-ox.cl.editor.prototype.initInput_ = function() {
-  var inp = goog.dom.createDom('input',
-    {'type':'text','class':'cmd-input'}, '>');
-  goog.events.listen(inp, 'keyup', this.keyUp_, false, this);
-  goog.events.listen(inp, 'blur', this.unFocus_, false, this);
-  return inp;
+ox.cl.editor.prototype.buildInput_ = function() {
+  this.input_ = goog.dom.createDom('input',
+    {'type':'text','class':'cmd-input'});
+  goog.events.listen(this.input_, 'keyup', this.keyUp_, false, this);
+  goog.events.listen(this.input_, 'blur', this.unFocus_, false, this);
+
+  this.inputContainer_ = this.buildInputContainer_();
 };
+
+
+ox.cl.editor.prototype.buildInputContainer_ = function() {
+  return goog.dom.createDom('div', {'class':'input-container'},
+        goog.dom.createDom('span', {'class':'prompt'}, '>'),
+        this.input_);
+};
+
 
 ox.cl.editor.prototype.unFocus_ = function() {
   goog.Timer.callOnce(function() {
@@ -124,7 +135,7 @@ ox.cl.editor.prototype.render_ = function() {
       div = this.lines_[i] = goog.dom.createElement('div');
       goog.dom.appendChild(this.parent_, div);
     };
-    div.innerHTML = this.buffer_[i];
+    div.innerHTML = this.buffer_[i];//.replace(/ /g, '&nbsp;');
   };
-  goog.dom.appendChild(this.parent_, this.input_);
+  goog.dom.appendChild(this.parent_, this.inputContainer_);
 };

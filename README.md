@@ -2,17 +2,32 @@
 
 ## Overview
 
-ox is a highly _UN_secure but awesome way to get terminals open on your
+ox is a highly *un*secure but *awesome* way to get terminals open on your
 machine from anywhere in the cosmos (with internets).
 
 Just run the server and browse to get your xterm up in your browser.
 
-## Installation (core)
+## Installation
 
-Installation is a big pain due to the dependencies, this is being worked on
-feverishly right now by teams of engineers so expect a fix soon.
+To install you need a few modules which are not linked at the moment so each
+has to be done individually (I am working on improving this)
 
-So no instrcutions for now, but please let me know if you love OX!!!
+      git clone git://github.com/gatapia/nclosure.git
+      cd nclosure
+      npm link
+
+      git clone git://github.com/gatapia/ncnode.git
+
+      git clone git://github.com/gatapia/ox.git
+
+## Running!
+
+      // Step 1 - We can have lots of fun
+      node srv/ox.js
+
+      // Step 2 - There's so much we can do
+      Browse -> http://127.0.0.1:8124/
+
 
 ## License
 

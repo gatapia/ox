@@ -1,14 +1,15 @@
-.* {
-  font-family:helvetica;
-}
 
 .term, .term input {
   background-color:#333;
   color:#eee;
-
+  font-family:monospace;
   font-size:small;
   border:groove 2px silver;
   padding-left:2px;
+}
+
+.term {
+  padding:3px;
 }
 
 .term div {
@@ -23,4 +24,14 @@
 
 .term input:focus {
   outline: none;
+}
+
+.prompt {
+  width:10px;
+}
+
+.input-container {
+  position:relative;
+  top:-2px;
+  right:-2px;
 }

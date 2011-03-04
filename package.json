@@ -1,0 +1,19 @@
+{ "name" : "ox"
+, "description" : "Online X Terminal"
+, "keywords" : [ "xterm", "online" ]
+, "version" : "0.0.1"
+, "homepage" : "https://github.com/gatapia/ox"
+, "author" : "Guido Tapia <guido@tapia.com.au> (www.picnet.com.au)"
+, "repository" :
+  { "type" : "git"
+  , "url" : "git://github.com/gatapia/ox.git"
+  }
+, "directories" : {
+                  "lib" : "./cl",
+                  "bin" : "./srv"
+                  }
+, "modules" : { "ncnode" : "../ncnode/node_wrappers/" }
+, "engines" : { "node" : ">=0.3.0-pre" }
+, "licenses": [ { "type": "Apache License, Version 2.0",
+                 "url": "http://www.apache.org/licenses/LICENSE-2.0" } ]
+}
