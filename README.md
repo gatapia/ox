@@ -9,23 +9,20 @@ Just run the server and browse to get your xterm up in your browser.
 
 ## Installation
 
-To install you need a few modules which are not linked at the moment so each
-has to be done individually (I am working on improving this)
+This project depends on nclosure. So...
 
+      // install nclosure
       git clone git://github.com/gatapia/nclosure.git
       cd nclosure
       npm link
 
-      git clone git://github.com/gatapia/ncnode.git
-
+      // install ox
       git clone git://github.com/gatapia/ox.git
 
 ## Running!
 
-      // Step 1 - We can have lots of fun
       node srv/ox.js
 
-      // Step 2 - There's so much we can do
       Browse -> http://127.0.0.1:8124/
 
 

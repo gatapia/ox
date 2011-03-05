@@ -12,8 +12,11 @@
                   "lib" : "./cl",
                   "bin" : "./srv"
                   }
-, "modules" : { "ncnode" : "../ncnode/node_wrappers/" }
-, "engines" : { "node" : ">=0.3.0-pre" }
+, "dependencies": {
+  "nclosure":">=0.4.2",
+  "socket.io":">=0.6.0"
+}
+, "engines" : { "node" : ">=0.3.8-pre" }
 , "licenses": [ { "type": "Apache License, Version 2.0",
                  "url": "http://www.apache.org/licenses/LICENSE-2.0" } ]
 }
